@@ -22,7 +22,24 @@ sudo airodump-ng -c [channel_number] --bssid [router_mac] wlan0mon
 
 ---
 
+## 2. Identifying the Locks
 
+If you don’t know the MAC address of the smart locks, try these methods:
+
+* **Check the Hardware:** Look at the back of the lock (under the battery cover) or on the original box for a sticker labeled **MAC** or **ID**.
+* **Check the Station List:** If you can't find a physical sticker, look for stations in the bottom `airodump-ng` list that show as `(not associated)`. Keep an eye out for manufacturer names (OUIs) like Yale, August, or Schlage. *(Tip: You can check MAC vendor prefixes online to confirm.)*
+
+---
+
+## 3. The "Targeted" Scan
+
+Once you find the router's **BSSID** and the **channel** it's operating on (e.g., Channel 6), lock `airodump-ng` onto it. This allows you to observe the connection stability continuously, without your Wi-Fi card "hopping" across other channels and missing data.
+
+```bash
+sudo airodump-ng -c 6 --bssid [ROUTER_MAC] wlan0mon
+```
+
+> **The Diagnosis:** Look at the **"Lost"** column in the station row for the lock. If you see a high "Lost" count, it confirms that data packets are actively being dropped mid-air due to heavy interference or a weak signal.
 ## 1. How to Read the Airodump-ng Table
 
 The screen will split into two sections. The top section shows Access Points (the office routers), and the bottom section shows "Stations" (client devices, like the smart locks).
