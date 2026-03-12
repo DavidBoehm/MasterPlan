@@ -1,3 +1,9 @@
+# Gain Access to routers
+### 1. Gain access to router
+### 2. locate any interference (xrays)
+### 3. netdiscover to locate ipv4 clients
+### 4. determine lock brand (and mac if accesible)
+
 # 🛠️ Smart Lock Network Diagnostics
 
 ## 1. Bettercap: Network Monitoring & Reconnaissance
