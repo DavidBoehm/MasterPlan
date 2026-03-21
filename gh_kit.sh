@@ -89,19 +89,35 @@ select opt in "${options[@]}"; do
             echo -e "\n${YELLOW}Pulling latest changes...${NC}"
             git pull
             ;;
-        "Quick Commit & Push")
-            echo -e "\n${CYAN}--- Quick Push ---${NC}"
-            git add .
-            read -p $'\033[1;32mEnter commit message: \033[0m' msg
-            if [ -n "$msg" ]; then
-                git commit -m "$msg"
-                git push origin HEAD
-                echo -e "${GREEN}Changes pushed to origin.${NC}"
-            else
-                echo -e "${RED}Commit aborted: Message cannot be empty.${NC}"
-            fi
-            ;;
-        "Create Pull Request")
+"Quick Commit & Push")
+    echo -e "\n${CYAN}--- Stage, Commit, & Push ---${NC}"
+    
+    # Check for changes
+    if [[ -z $(git status -s) ]]; then
+        echo -e "${YELLOW}No changes detected to commit.${NC}"
+    else
+        git add .
+        echo -e "${GREEN}✓ All changes staged.${NC}"
+        
+        read -p $'\033[1;32mEnter commit message: \033[0m' msg
+        if [ -z "$msg" ]; then
+            msg="Update: $(date +'%Y-%m-%d %H:%M:%S')"
+            echo -e "${YELLOW}Empty message. Using default: $msg${NC}"
+        fi
+        
+        git commit -m "$msg"
+        
+        echo -e "${YELLOW}Pushing to origin...${NC}"
+        git push origin HEAD
+        
+        if [ $? -eq 0 ]; then
+            echo -e "${GREEN}✓ Successfully pushed to GitHub.${NC}"
+        else
+            echo -e "${RED}✗ Push failed. Check your internet or permissions.${NC}"
+        fi
+    fi
+    ;;
+            "Create Pull Request")
             echo -e "\n${YELLOW}Opening PR creation in browser...${NC}"
             gh pr create --web
             ;;

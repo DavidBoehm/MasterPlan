@@ -1,0 +1,36 @@
+models:
+  - title: Qwen 2.5 Coder 7B
+    provider: openai
+    model: qwen2.5-coder-7b-instruct
+    apiBase: http://localhost:1234/v1
+  - title: Llama 3.1 8B
+    provider: openai
+    model: llama-3.1-8b-instruct
+    apiBase: http://localhost:1234/v1
+  - name: Autodetect
+    provider: lmstudio
+    model: AUTODETECT
+    apiBase: http://localhost:1234/v1/
+tabAutocompleteModel:
+  title: StarCoder2 3B
+  provider: openai
+  model: starcoder2-3b
+  apiBase: http://localhost:1234/v1
+embeddingsProvider:
+  provider: openai
+  model: nomic-embed-text-v1.5
+  apiBase: http://localhost:1234/v1
+systemMessage: You are an expert Markdown editor. Always output valid Markdown.
+  Preserve existing formatting, YAML frontmatter, and code blocks unless
+  instructed otherwise.
+customCommands:
+  - name: md-format
+    prompt: Format this markdown content. Fix heading hierarchies, ensure proper
+      list nesting, align tables, and ensure consistent spacing. Return ONLY the
+      formatted markdown.
+    description: Fix Markdown formatting & structure
+  - name: md-proof
+    prompt: Proofread this markdown text for grammar, spelling, and clarity. Do not
+      alter any markdown syntax, links, or code blocks. Return ONLY the
+      corrected text.
+    description: Proofread text (preserves syntax)
