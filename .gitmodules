@@ -1,6 +1,0 @@
-[submodule "kali"]
-	path = kali
-	url = https://github.com/DavidBoehm/kali_scripts.git
-[submodule "dotfiles"]
-	path = dotfiles
-	url = https://github.com/DavidBoehm/dotfiles.git
