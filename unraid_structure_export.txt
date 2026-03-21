@@ -1,0 +1,222 @@
+--- UNRAID DIRECTORY STRUCTURE MAP ---
+Generated: Thu Mar 19 12:17:50 PDT 2026
+--------------------------------------
+/mnt/user/
+├── appdata  [26 entries exceeds filelimit, not opening dir]
+├── backup
+├── cache_ssd
+│   ├── unmanic_file_conversion-bsnea-1773778668
+│   │   └── Fucking Machines - 2018-04-25 - All Natural Girl Next Door Gets Ass Fucked By the Machines [WEBDL-720p]-mfrys-1773843589.mp4
+│   └── unmanic_file_conversion-vshth-1773841780
+│       └── Bratty Sis - 2020-10-30 - Step Sis Has Big Tits - S16-E2 [WEBDL-1080p]-vshth-1773841780-WORKING-1-1.mp4
+├── data
+│   ├── audiobooks  [3803 entries exceeds filelimit, not opening dir]
+│   ├── books
+│   │   ├── Don Miguel Ruiz - The Mastery of Self (epub)
+│   │   │   └── Don Miguel Ruiz - The Mastery of Self (epub).epub
+│   │   ├── Don.Miguel.Ruiz-The.Mastery.of.Self.(epub)
+│   │   │   └── Don Miguel Ruiz - The Mastery of Self (epub).epub
+│   │   ├── Michael.Pollan-How.To.Change.Your.Mind.What.The.New.Science.Of.Psychedelics.Teaches.Us.About.Consciousness.Dying.Addiction.Depression.And.Transcendence.2018.Retail.EPUB
+│   │   │   ├── bb-How.T.nfo
+│   │   │   ├── bb-How.To.Change.Your.Mind.What.Th.epub
+│   │   │   ├── bb-how.t.nfo
+│   │   │   ├── file_id.diz
+│   │   │   └── file_id_1.diz
+│   │   ├── Ruiz, Don Miguel - The Four Agreements- Companion Book Using The Four Agreements to Master the Dream of Your Life
+│   │   │   └── Ruiz, Don Miguel - The Four Agreements- Companion Book Using The Four Agreements to Master the Dream of Your Life.epub
+│   │   ├── The.Fifth.Agreement.A.Practical.Guide.to.Self-Mastery.by.Don.Miguel Ruiz-xpost  [36 entries exceeds filelimit, not opening dir]
+│   │   ├── The.Four.Agreements.A.Practical.Guide.to.Personal.Freedom.by.Don.Miguel.Ruiz-xpost
+│   │   │   ├── The.Four.Agreements.T1SA.mp3
+│   │   │   ├── The.Four.Agreements.T1SB.mp3
+│   │   │   ├── The.Four.Agreements.T2SA.mp3
+│   │   │   ├── The.Four.Agreements.T2SB.mp3
+│   │   │   ├── The.Four.Agreements.by.Don.Miguel.Ruiz.epub
+│   │   │   └── The.Four.Agreements.by.Don.Miguel.Ruiz.pdf
+│   │   └── metadata.db
+│   ├── downloads
+│   │   ├── complete
+│   │   │   └── _FAILED_Roms.Goodsnes.Nintendo.Super.NES.Famicom.V2.04.Roms.G.to.R-oNePiEcE  [4321 entries exceeds filelimit, not opening dir]
+│   │   └── incomplete
+│   │       ├── Official.CoinOPS.Collections.Playstation.1.Pack  [84 entries exceeds filelimit, not opening dir]
+│   │       ├── Official.CoinOPS.Collections.Sega.Dreamcast.Pack  [74 entries exceeds filelimit, not opening dir]
+│   │       └── Roms.Goodsnes.Nintendo.Super.NES.Famicom.V2.04.Roms.G.to.R-oNePiEcE
+│   │           ├── __ADMIN__  [12 entries exceeds filelimit, not opening dir]
+│   │           ├── onepiece-rgoodsnesv204rgtr.nfo
+│   │           └── onepiece-rgoodsnesv204rgtr.sfv
+│   ├── games
+│   │   ├── Official.CoinOPS.Collections.Playstation.1.Pack
+│   │   │   └── collections
+│   │   │       └── Playstation 1
+│   │   │           ├── Launchers
+│   │   │           ├── exclude.txt
+│   │   │           ├── include.txt
+│   │   │           ├── medium_artwork
+│   │   │           │   ├── cabinets  [135 entries exceeds filelimit, not opening dir]
+│   │   │           │   ├── cabs
+│   │   │           │   │   ├── default.png
+│   │   │           │   │   └── desktop.ini
+│   │   │           │   ├── cover  [134 entries exceeds filelimit, not opening dir]
+│   │   │           │   ├── logo  [135 entries exceeds filelimit, not opening dir]
+│   │   │           │   ├── marquee  [135 entries exceeds filelimit, not opening dir]
+│   │   │           │   └── video  [134 entries exceeds filelimit, not opening dir]
+│   │   │           ├── playlists
+│   │   │           │   ├── favorites.txt
+│   │   │           │   └── lastplayed.txt
+│   │   │           ├── roms  [132 entries exceeds filelimit, not opening dir]
+│   │   │           ├── settings.conf.txt
+│   │   │           └── system_artwork
+│   │   │               ├── float.png
+│   │   │               ├── genre.png
+│   │   │               ├── logo.png
+│   │   │               └── system.png
+│   │   ├── bios
+│   │   │   ├── PS2_bios.zip
+│   │   │   ├── scph70012.bin
+│   │   │   ├── scph77008.bin
+│   │   │   └── scph90006.bin
+│   │   ├── dreamcast
+│   │   └── ps2
+│   ├── magazines
+│   ├── media
+│   │   ├── audio
+│   │   ├── books
+│   │   ├── movies
+│   │   └── tv
+│   ├── programs
+│   │   └── FL.Studio.All.Plugins.Edition.Portable.v25.2.3.5171
+│   │       ├── FL Studio
+│   │       │   ├── App
+│   │       │   │   ├── AppInfo
+│   │       │   │   │   ├── Launcher
+│   │       │   │   │   │   └── FL Studio.ini
+│   │       │   │   │   └── appicon.ico
+│   │       │   │   ├── Documents
+│   │       │   │   │   └── Image-Line
+│   │       │   │   │       ├── Downloads
+│   │       │   │   │       │   ├── FL Studio Mobile Factory Data  [30 entries exceeds filelimit, not opening dir]
+│   │       │   │   │       │   ├── Languages
+│   │       │   │   │       │   │   ├── 24.2
+│   │       │   │   │       │   │   ├── 24.2.1
+│   │       │   │   │       │   │   ├── 24.2.1.ini
+│   │       │   │   │       │   │   ├── 24.2.ini
+│   │       │   │   │       │   │   ├── 25.1.0
+│   │       │   │   │       │   │   └── 25.1.0.ini
+│   │       │   │   │       │   ├── Loop starter scripts
+│   │       │   │   │       │   │   └── Notes
+│   │       │   │   │       │   ├── Loop starter scripts.ini
+│   │       │   │   │       │   ├── Optional Features
+│   │       │   │   │       │   │   ├── Edison Declipper Windows
+│   │       │   │   │       │   │   ├── Edison Declipper Windows.ini
+│   │       │   │   │       │   │   ├── FL Cloud mastering v2 Windows
+│   │       │   │   │       │   │   ├── FL Cloud mastering v2 Windows.ini
+│   │       │   │   │       │   │   ├── Stem extractor Windows
+│   │       │   │   │       │   │   └── Stem extractor Windows.ini
+│   │       │   │   │       │   └── Themes
+│   │       │   │   │       │       ├── Community Vision Themes Vol 1
+│   │       │   │   │       │       ├── Community Vision Themes Vol 1.ini
+│   │       │   │   │       │       ├── Radioactive Themes
+│   │       │   │   │       │       ├── Radioactive Themes.ini
+│   │       │   │   │       │       ├── Solar System Themes
+│   │       │   │   │       │       └── Solar System Themes.ini
+│   │       │   │   │       ├── FL Studio
+│   │       │   │   │       │   ├── Artwork
+│   │       │   │   │       │   │   ├── Screenshots
+│   │       │   │   │       │   │   └── Thumbnails
+│   │       │   │   │       │   ├── Audio
+│   │       │   │   │       │   │   ├── Recorded
+│   │       │   │   │       │   │   ├── Rendered
+│   │       │   │   │       │   │   ├── Shapes
+│   │       │   │   │       │   │   └── Sliced audio
+│   │       │   │   │       │   ├── Help
+│   │       │   │   │       │   ├── Presets
+│   │       │   │   │       │   │   ├── Channel envelopes
+│   │       │   │   │       │   │   ├── Channel presets
+│   │       │   │   │       │   │   ├── Chord progressions
+│   │       │   │   │       │   │   ├── Clipboard files
+│   │       │   │   │       │   │   ├── Envelopes
+│   │       │   │   │       │   │   ├── Mixer presets
+│   │       │   │   │       │   │   ├── Plugin database
+│   │       │   │   │       │   │   ├── Plugin presets
+│   │       │   │   │       │   │   ├── Scores
+│   │       │   │   │       │   │   └── Speech
+│   │       │   │   │       │   ├── Projects
+│   │       │   │   │       │   │   ├── Backup
+│   │       │   │   │       │   │   ├── Project bones
+│   │       │   │   │       │   │   └── Templates
+│   │       │   │   │       │   ├── Settings  [16 entries exceeds filelimit, not opening dir]
+│   │       │   │   │       │   └── Support
+│   │       │   │   │       │       ├── Logs
+│   │       │   │   │       │       └── New plugin archive
+│   │       │   │   │       ├── FLEX
+│   │       │   │   │       │   ├── Images  [49 entries exceeds filelimit, not opening dir]
+│   │       │   │   │       │   ├── Packs  [109 entries exceeds filelimit, not opening dir]
+│   │       │   │   │       │   └── wavetables_cache.bin
+│   │       │   │   │       └── Maximus
+│   │       │   │   │           └── Data
+│   │       │   │   │               ├── Envelopes
+│   │       │   │   │               ├── LFO
+│   │       │   │   │               ├── Maps
+│   │       │   │   │               └── Samples
+│   │       │   │   ├── Program Files
+│   │       │   │   │   ├── Common Files
+│   │       │   │   │   │   └── VST2
+│   │       │   │   │   │       ├── FL Studio VSTi (Multi).dll
+│   │       │   │   │   │       └── FL Studio VSTi.dll
+│   │       │   │   │   ├── FL Cloud Plugins
+│   │       │   │   │   │   ├── FL Cloud Plugins.exe
+│   │       │   │   │   │   ├── Resources
+│   │       │   │   │   │   │   └── offline.html
+│   │       │   │   │   │   ├── install-helper
+│   │       │   │   │   │   │   └── FL Cloud Install Helper.exe
+│   │       │   │   │   │   └── licence-engine
+│   │       │   │   │   │       └── LicenceEngine.dll
+│   │       │   │   │   └── Image-Line
+│   │       │   │   │       ├── FL Studio 2025  [16 entries exceeds filelimit, not opening dir]
+│   │       │   │   │       └── FL Studio ASIO
+│   │       │   │   │           ├── ILWASAPI2ASIO.dll
+│   │       │   │   │           ├── ILWASAPI2ASIO_x64.dll
+│   │       │   │   │           ├── registerAsioDriver.bat
+│   │       │   │   │           └── unregisterAsioDriver.bat
+│   │       │   │   └── Program Files (x86)
+│   │       │   │       └── Microsoft
+│   │       │   │           └── EdgeWebView
+│   │       │   │               └── Application
+│   │       │   │                   └── 143.0.3650.139
+│   │       │   ├── FL Studio.exe
+│   │       │   └── desktop.ini
+│   │       └── Learning Fl Studio - Your Guide To Master The Daw
+│   │           ├── Learning Fl Studio - Your Guide To Master The Daw.azw3
+│   │           ├── Learning Fl Studio - Your Guide To Master The Daw.epub
+│   │           ├── Learning Fl Studio - Your Guide To Master The Daw.mobi
+│   │           └── Learning Fl Studio - Your Guide To Master The Daw.pdf
+│   ├── unraid_structure.txt
+│   └── xxx  [79 entries exceeds filelimit, not opening dir]
+├── domains
+│   ├── Ubuntu
+│   │   └── vdisk1.img
+│   ├── Windows 10
+│   │   └── vdisk1.img
+│   └── ubuntuserver
+│       └── noble-server-cloudimg-amd64.img
+├── games
+│   ├── Roms.Goodsnes.Nintendo.Super.NES.Famicom.V2.04.Roms.0.to.F-oNePiEcE  [3409 entries exceeds filelimit, not opening dir]
+│   └── Roms.Goodsnes.Nintendo.Super.NES.Famicom.V2.04.Roms.S.to.Z-oNePiEcE  [4227 entries exceeds filelimit, not opening dir]
+├── isos
+│   ├── Win10_Pro.iso
+│   ├── Windows.10.Pro.RTM.10240.x64.ISO.Eng.with.Microsoft.Toolkit
+│   │   ├── Microsoft Toolkit.exe
+│   │   ├── README.txt
+│   │   ├── Windows 10 Install Keys.txt
+│   │   └── en_windows_10_pro_10240_x64_dvd.iso
+│   ├── Windows10_Pro.iso
+│   ├── noble-server-cloudimg-amd64.img
+│   ├── ubuntu-24.04.4-desktop-amd64.iso
+│   ├── ubuntu-25.10-live-server-amd64.iso
+│   └── virtio-win-0.1.285-1.iso
+└── system
+    ├── docker
+    │   └── docker.img
+    └── libvirt
+        └── libvirt.img
+
+138 directories, 79 files
