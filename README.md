@@ -1,3 +1,26 @@
+### 🚀 System Initialization Checklist
+
+Follow these steps when deploying this **MasterPlan** on a new machine or after a fresh OS install:
+
+* **1. Elevate Permissions**: Ensure the interactive toolkits are runnable in your terminal.
+    ```bash
+    chmod +x gh_kit.sh ollama_kit.sh
+    ```
+* **2. Initialize Submodules**: Pull in your centralized configuration and security tools defined in your `.gitmodules`.
+    ```bash
+    git submodule update --init --recursive
+    ```
+* **3. Sync Dotfiles**: Create symbolic links from your `/dotfiles` directory to your home folder (`~/.zshrc`, `~/.p10k.zsh`) to maintain UI consistency across all machines.
+* **4. Windows Optimization (If on Host)**: Run the scripts in `RegEdit.md` to restore the classic context menu, disable Bing search, and unlock USB power settings for 3D printing.
+* **5. Hardware Audit**: If you are at the office or troubleshooting smart locks, verify signal strength and WPA handshakes using the `airodump-ng.md` guide.
+* **6. Security Baseline**:
+    * Verify you are using **SSH Keys** (Ed25519) instead of passwords.
+    * Ensure your user has `sudo` privileges but never log in directly as `root`.
+* **7. Environment Paths**: Add this repository to your `$PATH` in your `~/.bashrc` or `~/.zshrc` to call these scripts from any directory.
+    ```bash
+    export PATH=$PATH:$(pwd)
+    ```
+
 # 📂 MasterPlan: The Command Center
 
 A centralized compilation of scripts, automation toolkits, and system configurations tailored for a hybrid environment across **Unraid**, **Windows 11 (WSL2)**, and **Kali Linux**.
