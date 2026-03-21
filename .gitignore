@@ -1,0 +1,21 @@
+# Node/NPM
+node_modules/
+npm-debug.log
+
+# Python
+__pycache__/
+*.pyc
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Custom Scripts/Logs
+*.log
+temp/
+secrets.txt
