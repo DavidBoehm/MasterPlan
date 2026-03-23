@@ -19,3 +19,5 @@ desktop.ini
 *.log
 temp/
 secrets.txt
+
+unraid_structure_export.txt
