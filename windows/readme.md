@@ -1,6 +1,30 @@
 # Windows Toolkit Scripts — Beginner's Guide
 
-Welcome! This folder contains helpful tools for Windows users. You don't need to be a command-line expert—each script is menu-driven and guides you step by step. To use any script, right-click it and choose "Run with PowerShell" (or double-click for .bat files). Most scripts will show a menu and wait for your input.
+
+Welcome! This folder contains helpful tools for Windows users. You don't need to be a command-line expert—each script is menu-driven and guides you step by step.
+
+---
+
+## 🚦 How to Run These Scripts
+
+### On Windows (PowerShell)
+- **Right-click** any `.ps1` file and select **"Run with PowerShell"**.
+- Or, open a PowerShell window, use `cd` to navigate to this folder, then run:
+	- `./scriptname.ps1` (e.g., `./netkit.ps1`)
+- If you see a security warning, you may need to run: `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`
+- For scripts that require admin rights, use [admin_shell.bat](admin_shell.bat) to open an admin PowerShell window first.
+
+### On Windows (Bash/WSL)
+- Open your WSL terminal and navigate to this folder (e.g., `cd /mnt/d/src/MasterPlan/windows`).
+- Run PowerShell scripts with: `pwsh ./scriptname.ps1` (requires PowerShell Core in WSL).
+- `.bat` files are for Windows only and won't run in WSL.
+
+### On Linux
+- These scripts are designed for Windows, but you can run PowerShell scripts on Linux if you have PowerShell Core installed:
+	- `pwsh ./scriptname.ps1`
+- Some features (like Windows networking or registry tweaks) will only work on Windows.
+
+---
 
 ---
 

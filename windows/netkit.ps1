@@ -73,7 +73,35 @@ function Get-DiskSpace {
 
 function Get-DnsServers {
     Write-Host "`n[+] Checking DNS Servers..." -ForegroundColor Cyan
-    Get-DnsClientServerAddress -AddressFamily IPv4 | Where-Object { $_.ServerAddresses -ne $null } | Select-Object InterfaceAlias, ServerAddresses | Format-Table
+    $dnsInfo = Get-DnsClientServerAddress -AddressFamily IPv4 | Where-Object { $_.ServerAddresses -ne $null }
+    $problemFound = $false
+    foreach ($entry in $dnsInfo) {
+        $iface = $entry.InterfaceAlias
+        foreach ($dns in $entry.ServerAddresses) {
+            $comment = ""
+            $color = 'White'
+            if ($dns -match '^(127|0)\.') {
+                $comment = ' (Loopback or invalid)'
+                $color = 'Red'
+                $problemFound = $true
+            } elseif ($dns -match '^8\.8\.8\.8$|^1\.1\.1\.1$|^9\.9\.9\.9$') {
+                $comment = ' (Public DNS: Google/Cloudflare/Quad9)'
+                $color = 'Cyan'
+            } elseif ($dns -match '^192\.168\.' || $dns -match '^10\.' || $dns -match '^172\.(1[6-9]|2[0-9]|3[01])\.') {
+                $comment = ' (Likely local router/DHCP)'
+                $color = 'Green'
+            } else {
+                $comment = ' (Unusual/Custom DNS)'
+                $color = 'Yellow'
+            }
+            Write-Host "Interface: $iface  DNS: $dns$comment" -ForegroundColor $color
+        }
+    }
+    if ($problemFound) {
+        Write-Host "\n[!] Warning: Loopback or invalid DNS detected. This may cause connectivity issues." -ForegroundColor Red
+    } else {
+        Write-Host "\n[✓] DNS configuration appears normal." -ForegroundColor Green
+    }
 }
 
 function Get-CurrentUser {
@@ -266,7 +294,7 @@ function Show-Menu {
     Write-Host "[6] " -NoNewline -ForegroundColor Yellow; Write-Host "Test Internet Connectivity" -ForegroundColor White
     Write-Host "[7] " -NoNewline -ForegroundColor Yellow; Write-Host "Get MAC Address" -ForegroundColor White
     Write-Host "[8] " -NoNewline -ForegroundColor Yellow; Write-Host "Get Wi-Fi Network Name" -ForegroundColor White
-    Write-Host "[9] " -NoNewline -ForegroundColor Yellow; Write-Host "Get DNS Servers" -ForegroundColor White
+    Write-Host "[9] " -NoNewline -ForegroundColor Yellow; Write-Host "Scan & Analyze DNS Servers" -ForegroundColor White
     Write-Host "[10] "-NoNewline -ForegroundColor Yellow; Write-Host "Initiate SSH Session" -ForegroundColor White
     Write-Host "[11] "-NoNewline -ForegroundColor Yellow; Write-Host "Backup/Export WSL Distro" -ForegroundColor White
     Write-Host "[12] "-NoNewline -ForegroundColor Yellow; Write-Host "Subnet Ping Sweep" -ForegroundColor White
