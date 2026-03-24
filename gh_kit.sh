@@ -8,7 +8,7 @@ RED='\033[1;31m'
 NC='\033[0m'
 
 echo -e "${CYAN}=====================================${NC}"
-echo -e "${CYAN}        🐙 GitHub CLI Toolkit        ${NC}"
+echo -e "${CYAN} 🐙 GitHub CLI Toolkit(GitHub.com) ${NC}"
 echo -e "${CYAN}=====================================${NC}"
 
 # --- Dependency Check & OS-Aware Auto-Install ---
