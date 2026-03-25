@@ -23,7 +23,7 @@ If both are active but "not working correctly," check for these common conflicts
 * **MoCA Filters:** If they had Xfinity TV, there might be MoCA filters on the lines. If they are moving to pure streaming, these aren't needed but shouldn't hurt.
 * **Port Forwarding:** If they have a home server (like **Unraid** or **Home Assistant**), you will need to re-configure any port forwarding or Static IPs on the new BAM interface.
 * **Return Gear:** Ensure the client has the Xfinity Gateway, power brick, and any TV boxes set aside for return to avoid "unreturned equipment" fees.
-
+s
 
 
 **Would you like me to look up the specific administrative login IP or default credentials for the BAM-provided routers?**
