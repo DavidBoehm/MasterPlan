@@ -23,15 +23,9 @@ echo "Installing P10k and Plugins..."
 
 # 4. Stow configurations
 echo "Linking dotfiles with Stow..."
-cd ~/dotfiles
+cd ~/dotfiles || cd /mnt/d/src/MasterPlan/dotfiles || { echo "Dotfiles not found!"; exit 1; }
 # Remove existing .zshrc if it's not a symlink to prevent stow errors
 [ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ] && rm "$HOME/.zshrc"
 stow zsh
-
-# 5. Set Zsh as default shell
-if [ "$SHELL" != "$(which zsh)" ]; then
-    echo "Changing default shell to Zsh..."
-    chsh -s $(which zsh)
-fi
 
 echo "Bootstrap complete! Restart your terminal or run 'zsh'."

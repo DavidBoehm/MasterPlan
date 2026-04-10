@@ -66,5 +66,62 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+function zconf() {
+    echo "Opening .zshrc in VS Code... (Terminal will resume when tab is closed)"
+    code --wait ~/.zshrc
+    echo "Changes detected. Reloading zsh configuration..."
+    source ~/.zshrc
+    echo "Done! Your terminal is now up to date."
+}
+
+#alias nanobot='~/nanobot-agent/venv/bin/nanobot'
+export PATH="$HOME/.local/bin:$PATH"
+# export PATH="/home/linuxbrew/.linuxbrew/bin/openclaw:$PATH"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# OpenClaw Completion
+source "/home/dboehm/.openclaw/completions/openclaw.zsh"
+
+export OLLAMA_HOST=127.0.0.1:11434
+
+# --- Network Intel Alias ---
+alias netinfo='echo -e "\e[1;34m--- NETWORK INTEL ---\e[0m"; \
+echo -ne "\e[1;32mLocal IP:   \e[0m"; hostname -I | awk "{print \$1}"; \
+echo -ne "\e[1;32mPublic IP:  \e[0m"; curl -s https://ifconfig.me; echo ""; \
+echo -ne "\e[1;32mOllama:     \e[0m"; if netstat -tuln | grep -q ":11434 "; then echo -e "\e[1;32mONLINE (0.0.0.0)\e[0m"; else echo -e "\e[1;31mOFFLINE\e[0m"; fi; \
+echo -e "\e[1;34m---------------------\e[0m"'
+
+# Quick access to the launcher on the Dev Drive
+alias master='bash ~/mp/master.sh'
+
+# Quick jump to the source folder
+alias dev='cd /mnt/d'
+
+# Quick jump to Windows C: drive
+alias windir='cd /mnt/c'
+
+# Tmux starter interactive menu
+alias tstart='~/tmux-starter.sh'
+
+# Split-pane setup for watching processes + working
+alias splitwork='tmux split-window -h; tmux select-layout even-horizontal; echo "Split ready: Left pane = processes, Right pane = interactive"'
+
+# Spawn a background process pane while keeping current pane interactive  
+alias bgpane='tmux split-window -v "$(command -v btop 2>/dev/null || command -v htop 2>/dev/null || echo top)" 2>/dev/null || tmux split-window -v; tmux select-pane -U; echo "Bottom pane running system monitor, you keep top pane"'
+
+# Spin up 4 bot tmux sessions
+alias botfarm='for i in 1 2 3 4; do tmux new-session -d -s bot_$i 2>/dev/null || echo "bot_$i already exists"; done; tmux list-sessions | grep bot_'
+
+# Single window with 4 panes (2x2 grid)
+alias botpanes='tmux new-session -d -s botfarm 2>/dev/null; \
+tmux split-window -h -t botfarm; \
+tmux split-window -v -t botfarm:0.0; \
+tmux split-window -v -t botfarm:0.1; \
+tmux select-layout -t botfarm tiled; \
+echo "botfarm session ready with 4 panes"; \
+tmux attach -t botfarm'
+
+# Dotfiles management
 alias dotsync="~/dotfiles/bootstrap.sh"
 alias pushdots='cd ~/dotfiles && git add . && git commit -m "update dots" && git push && cd -'
