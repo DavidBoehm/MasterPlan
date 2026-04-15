@@ -1,2 +1,2 @@
 @echo off
-powershell -Command "Start-Process powershell -ArgumentList '-NoExit', '-Command', 'Set-Location -Path ''%CD%''' -Verb RunAs"
+powershell -ExecutionPolicy Bypass -Command "Start-Process powershell -ArgumentList '-ExecutionPolicy', 'Bypass', '-NoExit', '-Command', 'Set-Location -Path ''%CD%''' -Verb RunAs"

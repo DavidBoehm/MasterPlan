@@ -19,7 +19,11 @@ desktop.ini
 *.log
 temp/
 secrets.txt
+*.txt
 
 unraid_structure_export.txt
 
+
+# Ignore local git_kit.sh data exports
+repo_reports/
 */repo_reports/*
