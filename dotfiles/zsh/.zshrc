@@ -30,7 +30,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Plugins
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git z zsh-autosuggestions zsh-syntax-highlighting aliases history sudo copypath copyfile web-search common-aliases)
 
 # Disable auto-update prompts from Oh My Zsh
 DISABLE_AUTO_UPDATE="true"
