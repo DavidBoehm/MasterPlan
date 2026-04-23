@@ -23,16 +23,45 @@ echo "Installing P10k and Plugins..."
 
 # 4. Stow configurations
 echo "Linking dotfiles with Stow..."
-cd ~/dotfiles || cd /mnt/d/src/MasterPlan/dotfiles || { echo "Dotfiles not found!"; exit 1; }
+
+# Find dotfiles directory using absolute paths
+if [ -d "$HOME/dotfiles" ]; then
+    DOTFILES_DIR="$HOME/dotfiles"
+elif [ -d "/mnt/d/src/MasterPlan/dotfiles" ]; then
+    DOTFILES_DIR="/mnt/d/src/MasterPlan/dotfiles"
+else
+    echo "Dotfiles not found!"
+    exit 1
+fi
+
+echo "Using dotfiles at: $DOTFILES_DIR"
+cd "$DOTFILES_DIR" || exit 1
+
 # Remove existing .zshrc if it's not a symlink to prevent stow errors
-[ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ] && rm "$HOME/.zshrc"
+if [ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ]; then
+    echo "Backing up existing .zshrc..."
+    mv "$HOME/.zshrc" "$HOME/.zshrc.backup.$(date +%Y%m%d%H%M%S)"
+fi
+
+# Remove broken symlink if exists
+if [ -L "$HOME/.zshrc" ] && [ ! -e "$HOME/.zshrc" ]; then
+    echo "Removing broken symlink..."
+    rm "$HOME/.zshrc"
+fi
+
+# Run stow
 stow zsh
 
-# Fix the symlink to use absolute path
+# FIX: Ensure .zshrc uses absolute path, not relative
+echo "Fixing .zshrc symlink to use absolute path..."
 if [ -L "$HOME/.zshrc" ]; then
-    echo "Fixing symlink to absolute path..."
     rm "$HOME/.zshrc"
-    ln -s "$(pwd)/zsh/.zshrc" "$HOME/.zshrc"
 fi
+
+# Create absolute path symlink using $HOME
+ln -sf "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
+
+echo "Created: $HOME/.zshrc -> $DOTFILES_DIR/zsh/.zshrc"
+ls -la "$HOME/.zshrc"
 
 echo "Bootstrap complete! Restart your terminal or run 'zsh'."
