@@ -28,4 +28,11 @@ cd ~/dotfiles || cd /mnt/d/src/MasterPlan/dotfiles || { echo "Dotfiles not found
 [ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ] && rm "$HOME/.zshrc"
 stow zsh
 
+# Fix the symlink to use absolute path
+if [ -L "$HOME/.zshrc" ]; then
+    echo "Fixing symlink to absolute path..."
+    rm "$HOME/.zshrc"
+    ln -s "$(pwd)/zsh/.zshrc" "$HOME/.zshrc"
+fi
+
 echo "Bootstrap complete! Restart your terminal or run 'zsh'."
