@@ -40,11 +40,14 @@ A fast, customizable Zsh theme:
 # 1. Clone the repo
 git clone https://github.com/DavidBoehm/MasterPlan.git ~/MasterPlan
 
-# 2. Run the bootstrap script
+# 2. Navigate to dotfiles and make script executable
 cd ~/MasterPlan/dotfiles
+chmod +x bootstrap.sh
+
+# 3. Run the bootstrap script (do NOT use sudo)
 ./bootstrap.sh
 
-# 3. Restart your terminal or run
+# 4. Restart your terminal or run
 zsh
 ```
 
